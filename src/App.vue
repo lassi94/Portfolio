@@ -1,40 +1,40 @@
 <template>
   <div id="app">
     <div class="container main-content">
-    <nav class="navbar" role="navigation">
-      <div class="container"> 
-      <div class="navbar-brand">
-        <router-link to="/" class="navbar-item">LK</router-link>
+      <div class="inner">
+        <nav class="navbar" role="navigation">
+          <div class="container"> 
+            <div class="navbar-brand">
+              <router-link to="/" class="navbar-item logo">LK</router-link>
 
-        <div class="navbar-burger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-        <div class="navbar-menu">
-          <div class="navbar-start">
+              <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="navbar-menu">
+              <div class="navbar-start">
            
+              </div>
+              <div class="navbar-end">
+                <router-link to="/" class="navbar-item">Home</router-link>
+                <router-link to="/about" class="navbar-item">About</router-link>
+                <router-link to="/blog" class="navbar-item">Blog</router-link>
+                <a class="navbar-item">
+                  <router-link to="/contact" class="button is-oulined">
+                    <span id="contact">Contact me</span>
+                  </router-link>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="navbar-end">
-            <router-link to="/" class="navbar-item">Home</router-link>
-            <router-link to="/about" class="navbar-item">About</router-link>
-            <router-link to="/blog" class="navbar-item">Blog</router-link>
-            <a class="navbar-item">
-              <router-link to="/contact" class="button is-oulined">
-              <span id="contact">Contact me</span>
-              </router-link>
-            </a>
-          </div>
-      </div>
-      </div>
-    </nav>
+        </nav>
 
     <transition name="fade" mode="out-in">
         <router-view />
     </transition>
 
-    </div>
     <!--
     <div class="container">
         <div class="inner">
@@ -54,7 +54,8 @@
 
         </div>
     </div>-->
-
+  </div>
+  </div>
   </div>
 </template>
 
@@ -72,15 +73,42 @@ export default {
 
 #app 
   font-family: 'Montserrat'
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
   text-align: center
   color: #2c3e50
+  width: 90%
+  max-width: 1500px
+  height: 90%
 
-.main-content
-  margin: 50px auto
-  background-color: #fff
+  .main-content
+    margin: 
+    background-color: #fff
+    box-shadow: 15px 15px 40px lightgray
+    margin: 70px 0 0 10px
+    overflow: hidden
+    height: 100%
 
+.main-content.inner
+  position: relative
+  width: 100%
+  height: 100%
+  min-height: 100%
+
+.navbar
+  padding: 30px
+
+.logo
+  font-weight: 700
+  text-transform: uppercase
+
+.left-content
+  padding: 20px 50px 15px 50px
+
+.right-content
+  background: #d6d6d6
+  display: grid
+  grid-template-columns: auto
+  justify-items: center
+  align-items: center
 //body
   //background-color: #F1F0F0
 

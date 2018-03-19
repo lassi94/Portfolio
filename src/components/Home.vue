@@ -6,7 +6,7 @@
 
       <div class="container">
       <div class="columns">
-        <div class="column is-half pd">
+        <div class="column is-half left-content">
             <h1 class="title">PASSIONATE SOFTWARE DEVELOPER</h1>
             <p class="subtitle">{{ subtext }}</p>
             <h2 class="title">Find me</h2>
@@ -24,8 +24,8 @@
               </span>
           </a>
         </div>
-        <div class="column is-half pd1">
-          <img src="" alt="">
+        <div class="column is-half img1 right-content">
+          <router-link to="/portfolio/one" class="button is-outlined">Browse Work</router-link>
         </div>
       </div>
       </div>
@@ -53,7 +53,6 @@ a
   color: #42b983
 
 h1.title
-    margin-top: 20px
     margin-bottom: 70px
     text-transform: uppercase
     text-decoration: none
@@ -62,12 +61,24 @@ h1.title
 p.subtitle
   margin-bottom: 70px
   text-align: left
+  line-height: 52px
 
 hr
   width: 50%
   margin: 0 auto
   margin-top: -15px
   
-  
+.img1
+  background: url('../assets/images/home.png')
+
+.right-content.button
+  background: none
+  padding: 15px 20px
+  font-size: 1.7em
+  outline: 0
+  border: 1px solid #0052CC
+  color: #0052CC
+  text-transform: uppercase
+  cursot: pointer
 
 </style>
