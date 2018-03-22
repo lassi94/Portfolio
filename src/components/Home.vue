@@ -2,34 +2,27 @@
 
   <div class="home main">
 
-    <section class="section">
-
-      <div class="container">
-      <div class="columns">
-        <div class="column is-half left-content">
+        <div class="left-content">
             <h1 class="title">PASSIONATE SOFTWARE DEVELOPER</h1>
             <p class="subtitle">{{ subtext }}</p>
             <h2 class="title">Find me</h2>
             <hr align="center">
           
             <a href="https://github.com">
-              <span class="icon">
+              <span class="icon is-large">
                 <i class="fab fa-github"></i>
               </span>
             </a>
 
             <a href="https://linkedin.com">
-              <span class="icon">
-                <i class="fab fa-linkedin"></i>
+              <span class="icon is-large">
+                <i class="fab fa-linkedin-in"></i>
               </span>
-          </a>
+            </a>
         </div>
-        <div class="column is-half img1 right-content">
+        <div class="img1 right-content">
           <router-link to="/portfolio/one" class="button is-outlined">Browse Work</router-link>
         </div>
-      </div>
-      </div>
-    </section>
 
   </div>
 </template>
@@ -47,6 +40,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
+
+
+$colorPri: #0052CC
+
 h1, h2 
   font-weight: normal
 a 
@@ -68,17 +65,25 @@ hr
   margin: 0 auto
   margin-top: -15px
   
-.img1
-  background: url('../assets/images/home.png')
+.right-content
+    //background: url('../assets/images/home.png')
+    width: 100%
+    
+.right-content
+  .button
+    background-color: transparent
+    padding: 15px 20px
+    font-size: 1.7em
+    border: 1px solid #0052CC
+    color: #0052CC
+    text-transform: uppercase
+    cursor: pointer
+    &:hover
+      background-color: $colorPri
+      color: #fff
 
-.right-content.button
-  background: none
-  padding: 15px 20px
-  font-size: 1.7em
-  outline: 0
-  border: 1px solid #0052CC
-  color: #0052CC
-  text-transform: uppercase
-  cursot: pointer
+.icon
+  color: black
+
 
 </style>

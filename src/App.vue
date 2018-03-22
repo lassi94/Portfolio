@@ -2,7 +2,7 @@
   <div id="app">
     <div class="container main-content">
       <div class="inner">
-        <nav class="navbar" role="navigation">
+        <nav class="navbar is-trasparent" role="navigation">
           <div class="container"> 
             <div class="navbar-brand">
               <router-link to="/" class="navbar-item logo">LK</router-link>
@@ -71,45 +71,75 @@ export default {
 /*@import 'mq.sass'*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700')
 
-#app 
+
+html,body
+  background-color: #F1F0F0
+  width: 100%
+  height: 100%
+
+body
+  display: grid
+  grid-template-columns: 100%
+  justify-items: center
+  align-items: center
+  grid-template-areas: "face"
+
+#app
+  grid-area: face
   font-family: 'Montserrat'
   text-align: center
   color: #2c3e50
   width: 90%
   max-width: 1500px
-  height: 90%
+  height: 80%
+  margin: 50px auto 
 
-  .main-content
-    margin: 
-    background-color: #fff
-    box-shadow: 15px 15px 40px lightgray
-    margin: 70px 0 0 10px
-    overflow: hidden
-    height: 100%
-
-.main-content.inner
-  position: relative
-  width: 100%
+.main-content
+  background-color: #fff
+  box-shadow: 30px 30px 40px lightgray
+  overflow: hidden
   height: 100%
-  min-height: 100%
+  .inner
+    position: relative
+    width: 100%
+    height: 100%
+    min-height: 100%
 
 .navbar
+  z-index: 4
   padding: 30px
+  &.is-transparent
+    background-color: transparent
 
 .logo
   font-weight: 700
   text-transform: uppercase
 
+.navbar
+  .navbar-item
+    background: transparent
+    color: #222324
+    &:hover
+      background-color: transparent
+
+.main
+  height: 100%
+  display: grid
+  grid-template-columns: 42% auto
+  grid-template-areas: "left right"
+
 .left-content
+  grid-area: left
   padding: 20px 50px 15px 50px
 
 .right-content
+  grid-area: right
   background: #d6d6d6
   display: grid
-  grid-template-columns: auto
+  grid-template-columns: 100%
   justify-items: center
   align-items: center
-//body
-  //background-color: #F1F0F0
+  height: 100%
+
 
 </style>
