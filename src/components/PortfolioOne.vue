@@ -1,13 +1,14 @@
 
 <template>
-  <div class="portfolio-one">
-    <div class="left-content">
+  <div class="portfolio-one main">
+    <div class="left-content slideUp">
       <h1 class="title">
         {{ title }}
       </h1>
       <p class="subtitle">
         {{ subtitle }}
       </p>
+      <router-link to="/portfolio-two" img src="../assets/Group_3.svg" class="arrow arrow-down"></router-link>
     </div>
     <div class="right-content img2">
       <div class="card">
@@ -44,7 +45,11 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
+
+.arrow
+  height: 100px
+  widht: 100px
 
 </style>
 

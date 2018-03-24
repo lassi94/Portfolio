@@ -2,7 +2,7 @@
 
   <div class="home main">
 
-        <div class="left-content">
+        <div class="left-content slideUp">
             <h1 class="title" id="main-title">PASSIONATE SOFTWARE DEVELOPER</h1>
             <p class="subtitle">{{ subtext }}</p>
             <h2 class="title">Find me</h2>
@@ -44,19 +44,6 @@ export default {
 
 $colorPri: #0052CC
 
-h1, h2 
-  color: $colorPri
-
-h1.title
-    margin-bottom: 70px
-    text-transform: uppercase
-    text-decoration: none
-    text-align: left
-
-p.subtitle
-  margin-bottom: 70px
-  text-align: left
-  line-height: 52px
 
 a 
   color: #42b983
