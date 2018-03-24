@@ -3,25 +3,25 @@
   <div class="home main">
 
         <div class="left-content">
-            <h1 class="title">PASSIONATE SOFTWARE DEVELOPER</h1>
+            <h1 class="title" id="main-title">PASSIONATE SOFTWARE DEVELOPER</h1>
             <p class="subtitle">{{ subtext }}</p>
             <h2 class="title">Find me</h2>
             <hr align="center">
           
-            <a href="https://github.com">
-              <span class="icon is-large">
+            <a href="https://github.com/lassi94">
+              <span class="icon">
                 <i class="fab fa-github"></i>
               </span>
             </a>
 
             <a href="https://linkedin.com">
-              <span class="icon is-large">
+              <span class="icon">
                 <i class="fab fa-linkedin-in"></i>
               </span>
             </a>
         </div>
         <div class="img1 right-content">
-          <router-link to="/portfolio/one" class="button is-outlined">Browse Work</router-link>
+          <router-link to="/portfolio-one" class="button is-outlined">Browse Work</router-link>
         </div>
 
   </div>
@@ -45,9 +45,7 @@ export default {
 $colorPri: #0052CC
 
 h1, h2 
-  font-weight: normal
-a 
-  color: #42b983
+  color: $colorPri
 
 h1.title
     margin-bottom: 70px
@@ -60,14 +58,19 @@ p.subtitle
   text-align: left
   line-height: 52px
 
+a 
+  color: #42b983
+
 hr
   width: 50%
   margin: 0 auto
   margin-top: -15px
   
-.right-content
-    //background: url('../assets/images/home.png')
+.img1
+    background: url('../assets/images/homepicture.png')
     width: 100%
+    heigth: auto
+
     
 .right-content
   .button
@@ -75,7 +78,7 @@ hr
     padding: 15px 20px
     font-size: 1.7em
     border: 1px solid #0052CC
-    color: #0052CC
+    color: $colorPri
     text-transform: uppercase
     cursor: pointer
     &:hover
@@ -83,7 +86,14 @@ hr
       color: #fff
 
 .icon
-  color: black
+  color: $colorPri
+  margin: 20px
+
+.fa-github
+  font-size: 40px
+ 
+.fa-linkedin-in
+  font-size: 40px
 
 
 </style>

@@ -1,42 +1,6 @@
 <template>
   <div id="app">
     <div class="container main-content">
-      <div class="inner">
-        <nav class="navbar is-trasparent" role="navigation">
-          <div class="container"> 
-            <div class="navbar-brand">
-              <router-link to="/" class="navbar-item logo">LK</router-link>
-
-              <div class="navbar-burger">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="navbar-menu">
-              <div class="navbar-start">
-           
-              </div>
-              <div class="navbar-end">
-                <router-link to="/" class="navbar-item">Home</router-link>
-                <router-link to="/about" class="navbar-item">About</router-link>
-                <router-link to="/blog" class="navbar-item">Blog</router-link>
-                <a class="navbar-item">
-                  <router-link to="/contact" class="button is-oulined">
-                    <span id="contact">Contact me</span>
-                  </router-link>
-                </a>
-              </div>
-            </div>
-          </div>
-        </nav>
-
-    <transition name="fade" mode="out-in">
-        <router-view />
-    </transition>
-
-    <!--
-    <div class="container">
         <div class="inner">
           <nav>
             <router-link to="/" id="logo">LK</router-link>
@@ -44,6 +8,8 @@
             <ul>
               <li><router-link to="/">Home</router-link></li>
               <li><router-link to="/about">About</router-link></li>
+              <li><router-link to="/blog">Blog</router-link></li>
+              <li><router-link to ="/contact" class="button is-outlined">Contact me</router-link></li>
             </ul>
 
           </nav>
@@ -53,16 +19,19 @@
           </transition>
 
         </div>
-    </div>-->
+    </div>
   </div>
-  </div>
-  </div>
+
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+    
+  }
 }
+
 </script>
 
 <style lang="sass">
@@ -71,11 +40,15 @@ export default {
 /*@import 'mq.sass'*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700')
 
+$colorPri: #0052CC
 
 html,body
   background-color: #F1F0F0
   width: 100%
   height: 100%
+
+h1, h2 
+  color: $colorPri
 
 body
   display: grid
@@ -99,38 +72,66 @@ body
   box-shadow: 30px 30px 40px lightgray
   overflow: hidden
   height: 100%
-  .inner
-    position: relative
-    width: 100%
-    height: 100%
-    min-height: 100%
+.inner
+  position: relative
+  width: 100%
+  height: 100%
+  min-height: 100%
 
-.navbar
-  z-index: 4
+nav
+  display: grid
+  grid-template-columns: 200px auto
+  grid-template-areas: "logo navi"
+  position: absolute
   padding: 30px
-  &.is-transparent
-    background-color: transparent
+  z-index: 4
+  width: 90%
 
-.logo
+#logo
+  grid-area: logo
+  align-items: left
+  text-align: left
   font-weight: 700
   text-transform: uppercase
+  margin-left: 20px
+  font-size: 1.7em
+  position: absolute
+  color: #0052CC
+  letter-spacing: 5px
 
-.navbar
-  .navbar-item
-    background: transparent
-    color: #222324
-    &:hover
-      background-color: transparent
+ul
+  grid-area: navi
+  list-style-type: none
+  justify-self: right
+  margin-right: -100px
+  position: absolute
 
+li
+  display: inline
+  font-size: 1.3em
+  text-transform: uppercase
+  padding: 0 15px
+  font-weight: bold
+
+a
+  color: #222324
+
+.button
+  background-color: transparent
+  border-radius: 5px
+  border: 1px solid #222324
+  &:hover
+    background-color: #222324
+    color: #fff
 .main
   height: 100%
   display: grid
-  grid-template-columns: 42% auto
+  grid-template-columns: 40% auto
   grid-template-areas: "left right"
 
 .left-content
   grid-area: left
-  padding: 20px 50px 15px 50px
+  padding: 110px 50px 15px 50px
 
 .right-content
   grid-area: right
@@ -141,5 +142,15 @@ body
   align-items: center
   height: 100%
 
+h1.title
+    margin-bottom: 70px
+    text-transform: uppercase
+    text-decoration: none
+    text-align: left
+
+p.subtitle
+  margin-bottom: 70px
+  text-align: left
+  line-height: 52px
 
 </style>
