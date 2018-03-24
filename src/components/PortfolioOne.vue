@@ -8,7 +8,8 @@
       <p class="subtitle">
         {{ subtitle }}
       </p>
-      <router-link to="/portfolio-two" img src="../assets/Group_3.svg" class="arrow arrow-down"></router-link>
+      <img src="../assets/images/work.png">
+      <router-link to="/portfolio-two" img src="../assets/Group3.png" class="arrow arrow-down"></router-link>
     </div>
     <div class="right-content img2">
       <div class="card">
