@@ -84,6 +84,7 @@ a
   background-color: transparent
   border-radius: 5px
   border: 1px solid #222324
+  color: #222324
   &:hover
     background-color: #222324
     color: #fff
@@ -121,12 +122,28 @@ a
 
 .arrow
     width: 45px
+    height: 90px
     position: absolute
-    right: -21px
+    right: -5px
     opacity: 1
 
 .arrow-down
     bottom: 30px
+
+svg
+  width: 84px
+  height: 84px
+  .a
+    fill: #fff
+  .b
+    fill: none
+    stroke: $colorPri
+  .c
+    filter: url(#a)
+
+#arrowDown
+  height: 60px
+  width: 70px
 
 .slideUp
     animation: slideAnimation 3s forwards
