@@ -1,6 +1,6 @@
 <template>
     <div class="portfolio-two main">
-        <div class="left-content">
+        <div class="left-content slideUp">
             <h1 class="title">
                 UI DESIGN
             </h1>
