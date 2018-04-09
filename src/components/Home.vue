@@ -21,7 +21,7 @@
             </a>
         </div>
         <div class="img1 right-content">
-          <router-link to="/portfolio-one" class="button is-outlined">Browse Work</router-link>
+          <router-link to="/portfolio-one" class="button is-outlined">Browse Skills</router-link>
         </div>
 
   </div>

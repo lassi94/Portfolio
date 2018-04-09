@@ -9,24 +9,23 @@
           </p>
       </div>
       <div class="right-content">
-          <img src="">
+          <img src="../assets/images/PictureLassiKorhonen.jpeg" align="left">
           <h1 class="title titleRight">Experience</h1>
-          <div class="card">
+          <div class="card" id="cardOne">
               <div class="card-content">
 
               </div>
           </div>
-          <div class="card">
+          <div class="card" id="cardTwo">
               <div class="card-content">
                   
               </div>
           </div>
-          <div class="card">
+          <div class="card" id="cardThree">
               <div class="card-content">
                   
               </div>
           </div>
-          <h1 class="title titleRight">Projects</h1>
       </div>
   </div>
 </template>
@@ -45,12 +44,27 @@ export default {
 
 .card
     width: 90%
-    margin: -9em auto
+    align-items: left
+    margin-left: 15px
+    margin-top: -130px
+
+#cardTwo
+    margin-top: -160px
+#cardThree
+    margin-top: -190px
 
 .right-content
-    text-align: left
+    justify-items: left
     height: 100%
     background: #fff
+    .title
+        text-transform: uppercase
+        font-size: 22px
+        margin-left: 15px
+        margin-top: -65px
+    .titleRightTwo
+        margin-top: -10px
+
    
 .left-content
     background-color: #FFCC25
@@ -58,6 +72,13 @@ export default {
         color: #284173
         .subtitle
             color: #284173
+
+img
+    margin-top: 50px
+    width: 160px
+    height: 150px
+    border-radius: 100px
+    margin-left: 15px
 </style>
 
 
