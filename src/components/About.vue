@@ -7,13 +7,14 @@
           <p class="subtitle slideUp">
               {{ subtext }}
           </p>
+          <router-link to="/portfolio-one" class="button is-outlined">Look at my skills</router-link> 
       </div>
       <div class="right-content">
           <img src="../assets/images/PictureLassiKorhonen.jpeg" align="left">
           <h1 class="title titleRight">Experience</h1>
           <div class="card" id="cardOne">
               <div class="card-content">
-
+                  
               </div>
           </div>
           <div class="card" id="cardTwo">
@@ -67,12 +68,23 @@ export default {
 
    
 .left-content
-    background-color: #FFCC25
+    background-color: #ffe476
     .title
         color: #284173
         .subtitle
             color: #284173
-
+.button
+    background: transparent
+    margin: 45px auto
+    font-size: 1.7em
+    border: 1.5px solid #284173
+    color: #284173
+    border-radius: 0px
+    cursor: pointer
+    width: 350px 
+    &:hover
+        background: #284173
+        color: #ffe476
 img
     margin-top: 50px
     width: 160px

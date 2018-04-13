@@ -29,6 +29,35 @@
           </p>
         </div>
       </div>
+      <div class="card">
+        <div class="card-content">
+          <p class="title">
+            <span class="icon">
+              <i class="fab fa-angular"></i>
+            </span>
+          </p>
+          <p class="subtitle">
+            Angular5
+          </p>
+          <p class="subtitle">
+            <a class="button is-md is-outlined">
+              <span>More info</span>
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <p class="title">
+            <span class="icon">
+              <i class="fab fa-angular"></i>
+            </span>
+          </p>
+          <p class="subtitle">
+            Angular5
+          </p>
+        </div>
+      </div>
       
     </div>
   </div>

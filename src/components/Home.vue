@@ -68,6 +68,7 @@ hr
     color: $colorPri
     text-transform: uppercase
     cursor: pointer
+    border-radius: 0px
     &:hover
       background-color: $colorPri
       color: #fff
@@ -82,5 +83,6 @@ hr
 .fa-linkedin-in
   font-size: 40px
 
-
+h2
+  margin-top: 70px
 </style>
